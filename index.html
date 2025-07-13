@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
-<head><title>Candy & Job Trick</title></head>
+<head><title>Free Candy!</title></head>
 <body style="font-family:sans-serif; text-align:center; margin-top:50px;">
 
 <h1>Allow popups for candy!</h1>
 <button id="notifyBtn" style="font-size:20px; padding:10px 20px; cursor:pointer;">
-Get Candy
+Click to Get Candy
 </button>
 
 <script>
@@ -13,12 +13,10 @@ let hasShown = false;
 function showJobNotification() {
 if (!hasShown && Notification.permission === "granted") {
 hasShown = true;
-setTimeout(() => {
 new Notification("GET A JOB APPLICATION!", {
 body: "LOOK UNDER YOUR PILLOW TO START.",
 icon: "thesmileisherebuthesinyourhouseandV2.png"
 });
-}, 2000);
 }
 }
 document.addEventListener("visibilitychange", () => {
